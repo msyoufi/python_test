@@ -17,7 +17,7 @@ jobs:
       - name: Setup SSH Agent
         uses: webfactory/ssh-agent@v0.9.1
         with:
-          ssh-private-key: ${{ secrets.PA_SSH_PRIVATE_KEY}}
+          ssh-private-key: ${{ secrets.PA_SSH_PRIVATE_KEY }}
 
       - name: Add PythonAnywhere to known_hosts
         run: |
@@ -30,4 +30,4 @@ jobs:
           PA_TARGET_DIR: ${{secrets.PA_TARGET_DIR}}
         run: |
           echo "Syncing ./backend/ directory to PythonAnywhere target: $PA_TARGET_DIR"
-          rsync -av --delete ./backend/ "${PA_USERNAME}@${PA_HOST}:${PA_TARGET_DIR}/"
+          rsync -avzhe --delete ssh ./backend/ "${PA_USERNAME}@${PA_HOST}:${PA_TARGET_DIR}/"
