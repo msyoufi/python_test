@@ -6,3 +6,11 @@ on:
       - master
     paths:
       - '/backend/**'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    stpes:
+      - name: Deploy the backend directory
+        run: echo 'deploying to python any where'
