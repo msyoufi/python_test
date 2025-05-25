@@ -7,11 +7,10 @@ on:
     paths:
       - 'backend/**'
 
-
 jobs:
-  deploy:
+  deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy the backend directory
+      - name: Deploy to PythonAnyWhere
         run: |
-          echo 'deploying to python any where'
+          echo 'Testing the deployment workflow'
