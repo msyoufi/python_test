@@ -17,7 +17,7 @@ jobs:
       - name: Setup SSH Agent
         uses: webfactory/ssh-agent@v0.9.1
         with:
-          ssh-privet-key: ${{ secrets.PA_SSH_PRIVATE_KEY}}
+          ssh-private-key: ${{ secrets.PA_SSH_PRIVATE_KEY}}
 
       - name: Add PythonAnywhere to known_hosts
         run: |
