@@ -11,6 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    stpes:
+    steps:
       - name: Deploy the backend directory
-        run: echo 'deploying to python any where'
+        run: |
+          echo 'deploying to python any where'
